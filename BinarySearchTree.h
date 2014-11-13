@@ -138,7 +138,7 @@ bool BinarySearchTree<T>::isBalanced(TreeNode<T>* tNode)
          int rightH = getHeight(right);
          int diff = abs(rightH - leftH);
 
-         if (diff < 1)
+         if (diff < 2)
          {
             return true;
          }
