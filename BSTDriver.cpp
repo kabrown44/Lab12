@@ -117,13 +117,19 @@ int main()
    //display the height of the complete binary search tree (should be minimum height)
    //display whether the binary search tree is balanced (should be balanced)
 
+   cout << "Height Complete: " << complete_bst->getHeight() << endl;
 
+   bool com_bal = complete_bst->isBalanced();
 
+   if(com_bal)
+   {
+      cout << "Complete is Balanced" << endl;
+   }
 
-
-
-
-
+   else
+   {
+      cout << "Complete is Not Balanced" << endl;
+   }
 
    delete complete_bst;
 
