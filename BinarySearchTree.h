@@ -69,16 +69,34 @@ template < class T >
 int BinarySearchTree<T>::getHeight()
 {
    //DO THIS
-
+   int height;
+   height = getHeight(root);
+   return height;
 }
 
 template < class T >
 int BinarySearchTree<T>::getHeight(TreeNode<T>* tNode)
 {
    //DO THIS
+   int heightLeft;
+   int heightRight;
+   if(tNode == NULL)
+   {
+      return 0;
+   }
 
+   heightLeft = getHeight(tNode->getLeft());
+   heightRight = getHeight(tNode->getRight());
 
+   if (heightLeft > heightRight)
+   {
+      return heightLeft + 1;
+   }
 
+   else
+   {
+      return heightRight + 1;
+   }
 }
 
 template < class T >
