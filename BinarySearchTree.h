@@ -116,14 +116,14 @@ bool BinarySearchTree<T>::isBalanced(TreeNode<T>* tNode)
 {
    //DO THIS
 
-   TreeNode<T>* left = tNode->getLeft();
-   TreeNode<T>* right = tNode->getRight();
-
    if (tNode == NULL)
    {
       return true;
    }
-   else
+   TreeNode<T>* left = tNode->getLeft();
+   TreeNode<T>* right = tNode->getRight();
+
+   if (tNode != NULL)
    {
       bool leftB = isBalanced(left);
       bool rightB = isBalanced(right);
@@ -167,7 +167,7 @@ template < class T >
 void BinarySearchTree<T>::minimize(T** items, int first, int last)
 {
    //DO THIS (recursive minimize method)
-   if (last > first)
+   if (last < first)
    {
       return;
    }
@@ -209,7 +209,7 @@ BinarySearchTree<T>* BinarySearchTree<T>::minimizeComplete()
 
 }
 
-template < class T >
+/*template < class T >
 void BinarySearchTree<T>::minimizeComplete(T** items, int first, int last)
 {
    double TOL = 0.0001;
@@ -259,7 +259,7 @@ void BinarySearchTree<T>::minimizeComplete(T** items, int first, int last)
 
 
    }
-}
+}*/
 
 template < class T >
 void BinarySearchTree<T>::remove(String* sk)
